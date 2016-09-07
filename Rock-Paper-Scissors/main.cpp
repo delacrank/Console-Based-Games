@@ -5,7 +5,9 @@ using namespace std;
 
 int main()
 {
+    // display options
     info();
+    // start game
     selection();
 
 }
