@@ -2,6 +2,7 @@
 
 int life = 3;
 
+// Computer AI picks a number between 1 - 3 for rock paper or scissors
 int CompAI()
 {
     int i = 3;
@@ -10,12 +11,14 @@ int CompAI()
     return x;
 }
 
+// display game over, ends program
 int gameover()
 {
     cout << "Game over" << endl;
     return 0;
 }
 
+// display information
 void info()
 {
     cout << "Input a number: " << endl;
@@ -24,6 +27,7 @@ void info()
     cout << "3 for Rock" << endl;
 }
 
+// code for main game loop
 void selection()
 {
 
@@ -49,9 +53,11 @@ void selection()
    }
 }
 
+// if rock is selected
 void rock()
 {
     switch(CompAI()) {
+        // if computer picks scissors
         case 1:
             cout << "Computer AI has selected: " << 1 << endl;
             cout << "Rock beats scissors" << endl;
@@ -60,6 +66,7 @@ void rock()
             cout << endl;
             check();
             break;
+        // if computer picks paper
         case 2:
             cout << "Computer AI has selected: " << 2 << endl;
             cout << "Paper beats rock" << endl;
@@ -68,6 +75,7 @@ void rock()
             cout << endl;
             check();
             break;
+        // if computer picks rock
         case 3:
             cout << "Computer AI has selected: " << 3 << endl;
             cout << "Rock cancels out rock, try again" << endl;
@@ -80,6 +88,7 @@ void rock()
     }
 }
 
+// if paper is selected
 void paper()
 {
     switch(CompAI()) {
@@ -110,6 +119,7 @@ void paper()
     }
 } 
 
+// if scissors is choosen
 void scissors()
 {
     switch(CompAI()) {
@@ -140,6 +150,7 @@ void scissors()
     }
 }
 
+// display error message
 void default1()
 {
     cout << "Error, incorrect input, try again." << endl;
@@ -148,6 +159,7 @@ void default1()
     selection();
 }
 
+// check total life
 void check()
 {
     if(life < 0)
