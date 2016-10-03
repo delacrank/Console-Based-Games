@@ -95,7 +95,7 @@ int askNumber(string question, int high, int low)
 char humanPiece()
 {
     char go_first = askYesNo("Do you require the first move?");
-    if(go_first = 'y')
+    if(go_first == 'y')
     {
         cout << "\nThen take the first move\n";
         return x;
